@@ -80,7 +80,7 @@ div {
 }
 
 .sidebar {
-    background: #232328;
+    background: #2D2D35;
     width: 60px;
     height: 100%;
     text-align: center;
@@ -89,34 +89,50 @@ div {
 	padding: 0;
     left: 0;
     z-index: 60;
-    -webkit-box-shadow: 0 1px 12px rgba(0, 0, 0, 0.06);
-    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.06);
+    -webkit-box-shadow: 0 1px 12px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.6);
+}
+
+.page-title {
+	color: white;
+    font-family: 'Pridi', serif;
+    position: fixed;
+    top: 0.5%;
+    left: 70px;
+	z-index: 999;
+
+	
+}
+
+.page-title h1 {
+	margin: 0;
+	font-size: 2rem;
+	text-shadow: 2px 2px 4px #000000;
 }
 
 .sidebar-title {
 		color: white;
-		font-family: 'Pridi', serif;
-		height: 80%;
-		width: 100%;
-		display: inline-block;
+    font-family: 'Pridi', serif;
+	height: 60px;
+    width: 75vh;
+    display: inline-block;
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    -webkit-transform: translateX(-50%) rotate(-90deg);
+    -ms-transform: translateX(-50%) rotate(-90deg);
+    transform: translateX(-50%) rotate(-90deg);
+	text-shadow: 2px 2px 4px #000000;
 }
 
-.sidebar-title h1{
-	    transform: rotate(-90deg);
-    width: 475px;
-    position: absolute;
-    left: -340%;
-    top: 42%;
-    font-size: 2rem;
-	margin: 0;	
-}
+
 
 .sidebar-icons {
 	color: white;
-	height: 17%;
-	width: 100%;
     z-index: 100;
-	display: inline-block;
+    position: absolute;
+    bottom: 10px;
+    left: 2%;
 }
 
 .sidebar-icons a {
@@ -161,6 +177,21 @@ div {
 	
 }
 
+
+.nml-logo {
+	position: fixed;
+    bottom: 0.5%;
+    left: 70px;
+    z-index: 59;
+    background-image: url(apollo/logo-nml.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    -webkit-transition: background 0.5s;
+    transition: background 0.5s;
+    width: 100px;
+    height: 130px;
+}
+
 /* The side navigation menu */
 .nav-overlay {
     height: 100%; /* 100% Full-height */
@@ -172,7 +203,10 @@ div {
     background-color: #111; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+	opacity: 0;
+	visibility: hidden;
+    transition: .3s ease-in-out;
+    transition-property: opacity, width;	/* 0.5 second transition effect to slide in the sidenav */
 }
 
 /* The navigation menu links */
@@ -183,6 +217,7 @@ div {
     color: #818181;
     display: block;
     transition: 0.3s;
+	
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -200,6 +235,8 @@ div {
 	box-sizing: border-box;
 	margin: 0;
 	height: 100%;
+	background: url(apollo/space-bg.jpg) no-repeat;
+	background-size:100% 100%;
 	/*margin-left: 60px;*/
 }
 
@@ -215,7 +252,6 @@ div {
     -webkit-transition: all 2s ease-in-out;
     transition: all 2s ease-in-out;
     z-index: 30;
-	background-color: #282828;
 	width: 100%;
 	height: 100%;
 }
@@ -362,9 +398,10 @@ div {
 
 }
 
-
-
-
-
-
-	
+/*particles-js*/
+.particles-js-canvas-el {
+	width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+}
