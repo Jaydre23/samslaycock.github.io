@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css?family=Pridi:400,500');
+
+html {
+	height: 100%;
+}
+
+
+body {
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+}
+
+div {
+    display: block;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: inline-block;
+}
+
+/*[class*="col-"] {
+    float: left;
+    padding: 15px;
+}*/
+
+.column {
+	display: inline-block;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+.hamburger-menu {
+	margin-top: 20%;
+	height: 3%;
+	width: 100%;
+	cursor: pointer;
+	display: inline-block;
+}
+
+
+.hamburger-layer {
+	margin: auto;
+	width: 25px;
+    height: 3px;
+    background-color: #dadada;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	border-radius: 5px;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.change .layer1{
+	 -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-4px, 6px);
+}
+
+.change .layer2{
+	opacity: 0;
+}
+
+.change .layer3{
+	-webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-4px, -6px);
+
+}
+
+.sidebar {
+    background: #232328;
+    width: 60px;
+    height: 100%;
+    text-align: center;
+    position: fixed;
+	margin: 0;
+	padding: 0;
+    left: 0;
+    z-index: 60;
+    -webkit-box-shadow: 0 1px 12px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.06);
+}
+
+.sidebar-title {
+		color: white;
+		font-family: 'Pridi', serif;
+		height: 80%;
+		width: 100%;
+		display: inline-block;
+}
+
+.sidebar-title h1{
+	    transform: rotate(-90deg);
+    width: 475px;
+    position: absolute;
+    left: -340%;
+    top: 42%;
+    font-size: 2rem;
+	margin: 0;	
+}
+
+.sidebar-icons {
+	color: white;
+	height: 17%;
+	width: 100%;
+    z-index: 100;
+	display: inline-block;
+}
+
+.sidebar-icons a {
+	display:block;
+	width:100%;
+	height: 100%;
+}
+
+#tw-icon {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background-image: url(soc-icons/twitter.svg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	-webkit-transition: background 0.5s;
+	transition: background 0.5s;
+	margin-bottom: 20px;
+	margin:auto;
+
+}
+
+#tw-icon:hover{
+	background-image: url(soc-icons/twitter-hover.svg);
+	
+}
+
+#yt-icon {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background-image: url(soc-icons/youtube.svg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	-webkit-transition: background 0.5s;
+	transition: background 0.5s;
+	margin:auto;
+}
+
+#yt-icon:hover{
+	background-image: url(soc-icons/youtube-hover.svg);
+	
+}
+
+/* The side navigation menu */
+.nav-overlay {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 60px;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.nav-overlay a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.nav-overlay a:hover {
+    color: #f1f1f1;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .nav-overlay {padding-top: 15px;}
+    .nav-overlay a {font-size: 18px;}
+}
+
+.main-page {
+	box-sizing: border-box;
+	margin: 0;
+	height: 100%;
+	/*margin-left: 60px;*/
+}
+
+#slideshow {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+    position: relative;
+}
+
+.slide-page {
+	margin: 0;
+    -webkit-transition: all 2s ease-in-out;
+    transition: all 2s ease-in-out;
+    z-index: 30;
+	background-color: #282828;
+	width: 100%;
+	height: 100%;
+}
+
+.slide-desc {
+	width: 40%;
+    height: 100%;
+   display: inline-block;
+}
+
+.slide-desc-left {
+	width: 45%;
+    height: 100%;
+   float: right;
+}
+
+.slide-desc-right {
+	width: 50%;
+    height: 100%;
+   float: right;
+}
+
+.slide-desc-right h4 {
+	color: white;
+	font-family: 'Pridi', serif;
+	font-size: 50px;
+	line-height: 38px;
+	width: 600px;
+	position: relative;
+	top: 25%;
+
+
+}
+
+.slide-desc-right p {
+	color: #dadada;
+	font-family:'Pridi', serif;
+	line-height: 20px;
+	font-size: 20px;
+	width: 600px;
+	position: relative;
+	top: 22%;
+}
+
+.slide-desc-right .learn-more {
+	color: white;
+	border: 2px solid white;
+    border-radius: 20px;
+	font-family: 'Pridi', serif;
+	font-size: 20px;
+	text-align: center;
+	width: 150px;
+	position: relative;
+	top: 22%;
+	padding: 0.2em 0.5em;
+	
+}
+
+.slide-desc-right .learn-more a{
+	text-decoration: none;
+	color: white;
+}
+
+.slide-image {
+	width: 60%;
+   height: 100%;
+   background-size: cover;
+   background-repeat: no-repeat;
+   display: inline-block;
+   margin-left: -4px;
+}
+
+.slide-image .image-overlay {
+	height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.3);
+}
+
+/*Owl Stage CSS */
+#slideshow .owl-stage-outer, #slideshow .owl-stage-outer .owl-stage,  #slideshow .owl-stage-outer .owl-stage .owl-item {
+    height: 100%;
+}
+
+
+
+/* Owl Carousel Navigation */
+#controlNav {
+	right: 20px;
+	bottom: 20px;
+    position: fixed;
+    z-index: 100;
+	display: inline-block;
+}
+
+#controlNav div {
+	color: #FFF;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+    font-size: 1em;
+	color: #FFF;
+    background: #000;
+    opacity: .6;
+	border-radius: 50px;
+	margin-right: 10px;
+	display: inline-block;
+	cursor: pointer;
+	box-shadow: 0 1px 12px rgba(232, 228, 228, 0.6);
+}
+
+
+#controlDots {
+	left: 50%;
+	bottom: 20px;
+    position: fixed;
+    z-index: 110;
+	display: inline-block;
+	counter-reset: dots;
+
+}
+
+#controlDots div{
+    background: #D6D6D6;
+    color: #869791;
+    font-size: 0.8em;
+    padding: .2em .5em;
+    outline: none;
+	display: inline-block;
+	margin-right: 5px;
+	border-radius: 1em;
+	content: "0";
+	transition: 0.5s;
+}
+
+#controlDots .owl-dot:before {
+    counter-increment: dots;
+    content: counter(dots);
+}
+
+#controlDots  .active {
+		background:#869791;
+		color: #D6D6D6;
+
+}
+
+
+
+
+
+
+	
